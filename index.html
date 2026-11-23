@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YL Studio | Architecture & Design</title>
+<meta name="description" content="YL Studio — Architecture, Interior Design and Urban Planning. Thoughtful spaces, modern design and architectural visualization.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f1eb;color:#222}
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
+:root{--bg:#f4f1eb;--dark:#1d211f;--accent:#b39a77;--muted:#777}
+.nav{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;background:var(--bg)}
+.logo{font-size:24px;letter-spacing:3px;font-weight:700}
+.logo small{display:block;font-size:9px;letter-spacing:2px;font-weight:400;margin-top:5px}
+.links{display:flex;gap:28px;font-size:12px;letter-spacing:1px}
+.links a:hover{color:var(--accent)}
+.hero{min-height:80vh;background:var(--dark);color:white;display:flex;align-items:center;position:relative;overflow:hidden}
+.heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.52}
+.hero-content{position:relative;padding:90px 9%;max-width:850px}
+.tag{color:var(--accent);font-size:12px;letter-spacing:4px;text-transform:uppercase}
+.hero h1{font-size:clamp(42px,7vw,90px);font-weight:400;line-height:1.05;margin:25px 0}
+.hero p{max-width:500px;color:#ddd;line-height:1.8;font-size:16px}
+.btn{display:inline-block;margin-top:30px;border:1px solid var(--accent);padding:15px 25px;color:white;font-size:12px;letter-spacing:2px;transition:.3s}
+.btn:hover{background:var(--accent);color:#111}
+section{padding:90px 8%}
+.sectionhead{margin-bottom:40px}
+.sectionhead small{color:var(--accent);letter-spacing:3px;font-size:11px}
+.sectionhead h2{font-weight:400;font-size:38px;margin-top:15px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.aboutimg{height:430px;object-fit:cover}
+.about p{line-height:1.9;color:#555;margin-top:20px}
+.services{background:var(--dark);color:white}
+.servicesgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#444}
+.service{background:var(--dark);padding:35px}
+.service span{color:var(--accent);font-size:12px}
+.service h3{font-weight:400;font-size:23px;margin:18px 0}
+.service p{font-size:14px;color:#bbb;line-height:1.8}
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.project img{height:350px;object-fit:cover}
+.project h3{font-weight:400;margin-top:18px;font-size:20px}
+.project p{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6}
+.note{font-size:12px;color:var(--muted);margin-top:24px;line-height:1.7}
+.interiors{background:#e8e3d9}
+.interiors img{max-height:450px;object-fit:cover}
+.contact{background:var(--dark);color:white;text-align:center}
+.contact p{color:#ccc;line-height:1.8;margin-top:18px}
+.contact .btn{margin-top:25px}
+.footer{padding:25px 8%;background:#121513;color:#aaa;font-size:11px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.footer strong{color:white;letter-spacing:2px}
+@media(max-width:750px){
+.nav{padding:18px 5%;flex-wrap:wrap;gap:20px}
+.links{gap:15px;flex-wrap:wrap;font-size:10px}
+.hero{min-height:70vh}
+.hero-content{padding:70px 7%}
+section{padding:65px 6%}
+.about{grid-template-columns:1fr;gap:30px}
+.aboutimg{height:300px}
+.projects{grid-template-columns:1fr}
+.project img{height:280px}
+.servicesgrid{grid-template-columns:1fr}
+.sectionhead h2{font-size:30px}
+.footer{padding:22px 6%}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+<div class="logo">YL STUDIO<small>ARCHITECTURE • INTERIOR DESIGN • URBAN PLANNING</small></div>
+<nav class="links">
+<a href="#about">ABOUT</a>
+<a href="#services">SERVICES</a>
+<a href="#projects">PROJECTS</a>
+<a href="#contact">CONTACT</a>
+</nav>
+</header>
+
+<section class="hero">
+<img class="heroimg" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85" alt="Modern architectural residence">
+<div class="hero-content">
+<div class="tag">Independent Design Studio</div>
+<h1>Architecture<br>Beyond Boundaries.</h1>
+<p>Thoughtful planning. Modern aesthetics. Spaces designed with purpose, detail and character.</p>
+<a class="btn" href="#projects">EXPLORE OUR WORK &nbsp; ↗</a>
+</div>
+</section>
+
+<section id="about">
+<div class="about">
+<img class="aboutimg" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85" alt="Modern residential architecture">
+<div>
+<div class="tag">About YL Studio</div>
+<h2 style="font-size:38px;font-weight:400;margin-top:18px">Designing spaces.<br>Defining experiences.</h2>
+<p>YL Studio is a design-focused studio working across architecture, interior design and urban planning. We believe every space deserves thoughtful planning, balanced aesthetics and practical design.</p>
+<p>Our approach combines creative vision, careful detailing and modern architectural expression.</p>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="sectionhead">
+<small>WHAT WE DO</small>
+<h2>Our Services</h2>
+</div>
+<div class="servicesgrid">
+<div class="service"><span>01</span><h3>Architectural Design</h3><p>Residential planning, layouts, elevations and architectural design solutions.</p></div>
+<div class="service"><span>02</span><h3>3D Visualization</h3><p>Realistic exterior visualizations to bring architectural concepts to life.</p></div>
+<div class="service"><span>03</span><h3>Drawing Packages</h3><p>Architectural working drawings and coordinated drawing packages.</p></div>
+<div class="service"><span>04</span><h3>Interior Design</h3><p>Interior planning, material concepts and space-focused design.</p></div>
+<div class="service"><span>05</span><h3>Structural Drawing Coordination</h3><p>Structural drawing package coordination and drawing-based support.</p></div>
+<div class="service"><span>06</span><h3>Site Assistance</h3><p>Site visits and material-selection assistance as per the selected service package.</p></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="sectionhead">
+<small>PORTFOLIO</small>
+<h2>Selected Work</h2>
+</div>
+<div class="projects">
+<div class="project">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Contemporary residential exterior reference">
+<h3>Residential Exterior</h3>
+<p>Modern residential architecture & exterior visualization.</p>
+</div>
+<div class="project">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Modern house exterior reference">
+<h3>Modern Residence</h3>
+<p>Contemporary materials, architectural form and balanced detailing.</p>
+</div>
+<div class="project">
+<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85" alt="Residential design reference">
+<h3>Architectural Visualization</h3>
+<p>Design visualization reference showcasing modern architecture.</p>
+</div>
+<div class="project">
+<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=85" alt="Interior bathroom reference">
+<h3>Bathroom Interior</h3>
+<p>Interior design detail — bathroom space.</p>
+</div>
+</div>
+<p class="note">Portfolio images shown here are temporary visual references. They will be replaced with actual YL Studio projects before final portfolio publication.</p>
+</section>
+
+<section class="interiors">
+<div class="sectionhead">
+<small>INTERIOR DESIGN</small>
+<h2>Details matter.</h2>
+</div>
+<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1800&q=85" alt="Bathroom interior design reference">
+<p style="margin-top:20px;line-height:1.8;color:#555">A focused approach to materials, proportions, lighting and detail — shaping spaces with clarity and balance.</p>
+</section>
+
+<section class="contact" id="contact">
+<div class="tag">LET'S CONNECT</div>
+<h2 style="font-size:40px;font-weight:400;margin-top:18px">Have a project in mind?</h2>
+<p>Let's discuss your ideas and turn them into a thoughtfully designed space.</p>
+<a class="btn" href="mailto:ylstudio.design@gmail.com">CONTACT YL STUDIO &nbsp; ↗</a>
+</section>
+
+<footer class="footer">
+<strong>YL STUDIO</strong>
+<span>Architecture • Interior Design • Urban Planning</span>
+<span>© 2026 YL Studio. All rights reserved.</span>
+</footer>
+</body>
+  </html>
