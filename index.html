@@ -374,6 +374,39 @@ CONTACT DIRECTLY ON WHATSAPP
 <strong>YL STUDIO</strong>
 <span>Architecture • Interior Design • Urban Planning</span>
 <span>© 2026 YL Studio. All rights reserved.</span>
-</footer>
+</footer> <script>
+document.getElementById("projectInquiry").addEventListener("submit",function(e){
+e.preventDefault();
+
+const f=this;
+const services=[...f.querySelectorAll('input[name="services"]:checked')].map(x=>x.value);
+
+if(services.length===0){
+alert("Please select at least one service.");
+return;
+}
+
+const area=f.elements["area"].value.trim();
+const dimensions=f.elements["dimensions"].value.trim();
+
+const message=
+"YL STUDIO - PROJECT INQUIRY\n\n"+
+"Full Name: "+f.elements["fullname"].value+"\n"+
+"Contact Number: "+f.elements["phone"].value+"\n"+
+"City: "+f.elements["city"].value+"\n"+
+"District: "+f.elements["district"].value+"\n"+
+"State: "+f.elements["state"].value+"\n"+
+"PIN Code: "+f.elements["pincode"].value+"\n"+
+"Land Category: "+f.elements["landcategory"].value+"\n"+
+"Plot Dimensions: "+(f.elements["unknown_dimensions"].checked?"Unknown":dimensions||"Not provided")+"\n"+
+"Total Land Area: "+(f.elements["unknown_area"].checked?"Unknown":area||"Not provided")+"\n"+
+"Services Required: "+services.join(", ")+"\n"+
+"Project Timeline: "+f.elements["timeline"].value+"\n"+
+"Additional Requirements: "+f.elements["requirements"].value;
+
+const url="https://wa.me/919988410581?text="+encodeURIComponent(message);
+window.open(url,"_blank");
+});
+  </script>
 </body>
   </html>
