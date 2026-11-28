@@ -373,5 +373,54 @@ CONTACT DIRECTLY ON WHATSAPP
 <span>Architecture • Interior Design • Urban Planning</span>
 <span>© 2026 YL Studio. All rights reserved.</span>
 </footer>
+
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycby2QFj0tJdhxD8fJCnN4w7y5xpAdpPHZdkdIaVbqIZXrK7wjbH3jKESBu1artrOqwFxWA/exec";
+
+const form = document.getElementById("projectInquiry");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true;
+  button.textContent = "SUBMITTING...";
+
+  let message = document.getElementById("formMessage");
+
+  if (!message) {
+    message = document.createElement("p");
+    message.id = "formMessage";
+    message.style.cssText =
+      "margin-top:15px;text-align:center;line-height:1.7;";
+    form.appendChild(message);
+  }
+
+  message.textContent = "Submitting your inquiry...";
+
+  const formData = new FormData(form);
+
+  fetch(scriptURL, {
+    method: "POST",
+    mode: "no-cors",
+    body: new URLSearchParams(formData)
+  })
+  .then(() => {
+    message.style.color = "green";
+    message.textContent =
+      "Your inquiry has been submitted. Thank you for contacting YL Studio!";
+    form.reset();
+    button.textContent = "SUBMIT PROJECT INQUIRY";
+    button.disabled = false;
+  })
+  .catch(() => {
+    message.style.color = "red";
+    message.textContent =
+      "Submission could not be sent. Please try again or contact us.";
+    button.textContent = "SUBMIT PROJECT INQUIRY";
+    button.disabled = false;
+  });
+});
+</script>
 </body>
   </html>
